@@ -5,7 +5,6 @@ alias init="cd '$cloud'"
 ln $cloud/dotfiles/.zshrc ~/.zshrc
 export GPG_TTY=$(tty)
 eval "$(frum init)"
-export SSH_CONFIG=$cloud/ssh/config
-export SSH_PRIVATE_KEY=$cloud/ssh/
-find $cloud/ssh/ -type f \( -name "*.pub" -o -name "config" -o -name ".DS_Store" \) -prune -o -type f -exec ssh-add --apple-use-keychain {} +
+ln $cloud/ssh/config ~/.ssh/config
+find $cloud/ssh -type f \( -name "*.pub" -o -name "config" -o -name ".DS_Store" \) -prune -o -type f -exec ssh-add --apple-use-keychain {} +
 
