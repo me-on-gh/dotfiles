@@ -7,4 +7,4 @@ export GPG_TTY=$(tty)
 eval "$(frum init)"
 ln $cloud/local/ssh/config ~/.ssh/config
 find $cloud/local/ssh -type f \( -name "*.pub" -o -name "config" -o -name ".DS_Store" \) -prune -o -type f -exec ssh-add --apple-use-keychain {} +
-alias git_init_gh='sh ../utilities/git_init_gh.sh'
+alias git_init_gh="sh '$cloud'/remote_public/utilities/git_init_gh.sh"
