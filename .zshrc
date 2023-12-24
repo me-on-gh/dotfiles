@@ -9,3 +9,6 @@ ln $cloud/local/ssh/config ~/.ssh/config
 find $cloud/local/ssh -type f \( -name "*.pub" -o -name "config" -o -name ".DS_Store" \) -prune -o -type f -exec ssh-add --apple-use-keychain {} +
 alias git-init-gh="sh '$cloud'/remote_public/utilities/git-init-gh.sh"
 alias git-clone-gh="sh '$cloud'/remote_public/utilities/git-init-gh.sh"
+alias cc() {
+ highlight -O ansi "$1"
+}
